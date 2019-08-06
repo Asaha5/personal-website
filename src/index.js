@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import '../node_modules/aos/dist/aos.js'
+import '../node_modules/aos/dist/aos.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
