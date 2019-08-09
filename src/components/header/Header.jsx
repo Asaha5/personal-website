@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import profileImage from "../../profile.jpg";
 import { headerMenus } from "../constants";
+import Toggle from "../../common/Toggle";
 
 const HeaderContainer = styled.nav`
   display: flex;
@@ -9,6 +10,10 @@ const HeaderContainer = styled.nav`
   align-items: center;
   margin: 3rem 6rem 0.2rem 6rem;
   height: 70px;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 const HeaderMenuContainer = styled.div`
@@ -45,15 +50,20 @@ const Image = styled.img`
   }
 `;
 
-export default () => {
+export default ({ toggleTheme }) => {
   return (
     <HeaderContainer>
       <Image src={profileImage} alt="Arijit Saha" />
       <HeaderMenuContainer>
-        {headerMenus.map(({value, link}, idx) => {
-          return <HeaderItem key={`header_menu_${idx}`} href={`#${link}`}>{value}</HeaderItem>;
+        {headerMenus.map(({ value, link }, idx) => {
+          return (
+            <HeaderItem key={`header_menu_${idx}`} href={`#${link}`}>
+              {value}
+            </HeaderItem>
+          );
         })}
       </HeaderMenuContainer>
+      <Toggle toggleTheme={toggleTheme} />
     </HeaderContainer>
   );
 };

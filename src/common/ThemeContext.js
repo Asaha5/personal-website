@@ -2,7 +2,7 @@ import React from 'react';
 
 export const DarkTheme = {
   mode: "dark",
-  background: `rgb(20,17,64)`,
+  background: `#424265`,
   backgroundGradient: `linear-gradient(180deg, rgba(20,17,64,1) 0%, rgba(64,64,105,1) 69%)`,
   bgGradient: {
     first: {
@@ -25,7 +25,7 @@ export const DarkTheme = {
 
 export const LightTheme = {
   mode: "light",
-  background: `#e3ffe7`,
+  background: `#ffffff`,
   backgroundGradient: `linear-gradient(180deg, #e3ffe7 0%, #d9e7ff 100%)`,
   bgGradient: {
     first: {

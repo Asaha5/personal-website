@@ -3,11 +3,16 @@ import styled from "styled-components";
 
 const TimelineCardContainer = styled.div`
   display: flex;
-  width: 60%;
+  width: 70%;
   height: 100%;
   flex-direction: column;
   padding: 0.8rem;
   margin-left: 2rem;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0.5rem;
+    margin-left: .5rem;
+  }
 `;
 
 const CardHeader = styled.h3`

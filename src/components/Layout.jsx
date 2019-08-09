@@ -80,11 +80,11 @@ const TopButton = styled.a`
   }
 `;
 
-export default () => {
+export default ({toggleTheme}) => {
   return (
     <Layout>
       <Header>
-        <HeaderContent />
+        <HeaderContent toggleTheme={toggleTheme}/>
       </Header>
       <AboutMe id="aboutme">
         <AboutMeContent />

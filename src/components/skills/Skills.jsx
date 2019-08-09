@@ -12,6 +12,9 @@ const SkillsContainer = styled.div`
 
 const SkillItemsContainer = styled.div`
   padding: 3rem;
+  @media only screen and (max-width: 600px) {
+    padding: 1rem;
+  }
 `;
 
 const SkillItem = styled.div`
