@@ -28,6 +28,9 @@ const ContactDetailContainer = styled.div`
 
 const ContactDetail = styled.p`
   font-size: 1.3rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 1.1rem
+  }
 `;
 
 const IconContainer = styled.span`
@@ -36,6 +39,9 @@ const IconContainer = styled.span`
   line-height: 2rem;
   vertical-align: middle;
   color: ${props => props.theme.textColor};
+  @media only screen and (max-width: 600px) {
+    font-size: 1.8rem
+  }
 `;
 
 const IconLink = styled.a`

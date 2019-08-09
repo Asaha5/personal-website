@@ -20,7 +20,14 @@ export const DarkTheme = {
   miscColor: `#FFAA55`,
   timelineColor: '#11FF88',
   cardSubHeader: '#ff9d9d',
-  filledStarColor: '#C6E1E1'
+  filledStarColor: '#C6E1E1',
+  barColors: {
+    1: `#FF0000`,
+    2: `#C44000`,
+    3: `#BFBF00`,
+    4: `#B9B9FF`,
+    5: `#00D200`
+  }
 }
 
 export const LightTheme = {
@@ -41,9 +48,16 @@ export const LightTheme = {
   headerTextColor: '#4C4C4C',
   textColor: `#515151`,
   miscColor: `#003A75`,
-  timelineColor: '#5B5B00',
+  timelineColor: '#408080',
   cardSubHeader: '#783D3D',
-  filledStarColor: '#003A75'
+  filledStarColor: '#003A75',
+  barColors: {
+    1: `#FF0000`,
+    2: `#C44000`,
+    3: `#9B9B00`,
+    4: `#007EBB`,
+    5: `#008000`
+  }
 }
 
 const ThemeContext = React.createContext(DarkTheme);

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SectionHeader from "../SectionHeader";
 import { skills } from "../constants";
 import Stars from "./Stars";
+import Bar from "./Bar";
 
 const SkillsContainer = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const SkillItemsContainer = styled.div`
 
 const SkillItem = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 `;
 
 const SkillSubHeader = styled.h3`
@@ -30,7 +31,10 @@ const SkillSubHeader = styled.h3`
   margin: 0.5rem;
   flex: 0 0 250px;
   @media only screen and (max-width: 600px) {
-    flex: 0 0 180px;
+    flex: 0 0 120px;
+    align-self: center;
+    font-size: 1.1rem;
+    justify-self: center;
   }
 `;
 
@@ -43,11 +47,12 @@ export default () => {
           return (
             <SkillItem key={`skill_item_${skill}_${idx}`}>
               <SkillSubHeader>{skill}</SkillSubHeader>
-              <Stars
+              {/* <Stars
                 fontSize={"1.2rem"}
                 rating={rating}
                 keyIdx={idx}
-              />
+              /> */}
+              <Bar rating={rating}/>
             </SkillItem>
           );
         })}

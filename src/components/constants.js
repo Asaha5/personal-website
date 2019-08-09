@@ -75,6 +75,10 @@ export const skills = [
     rating: 4
   },
   {
+    skill: "JavaScript",
+    rating: 5
+  },
+  {
     skill: "React",
     rating: 5
   },
@@ -107,6 +111,14 @@ export const skills = [
     rating: 5
   }
 ]
+
+export const ratingToLevelMap = {
+  5: "Expert",
+  4: "Intermediate",
+  3: "Good",
+  2: "Beginner",
+  0: "Catching up first"
+}
 
 export const contactDetails = {
   phone: "+918961146815/ +918697714763",
