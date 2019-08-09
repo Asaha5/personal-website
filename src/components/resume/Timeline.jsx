@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const timelineColor = '#00e874';
-
 const TimelineContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,7 +13,7 @@ const YearCircle = styled.div`
   height: 90px;
   width: 90px;
   border-radius: 50%;
-  border: 3px solid ${timelineColor};
+  border: 3px solid ${props => props.theme.timelineColor};
   flex: 0 0 90px;
   position: relative;
   font-weight: 500;
@@ -33,7 +31,7 @@ const YearCircle = styled.div`
 const Line = styled.div`
   width: 5px;
   height: 80%;
-  background-color: ${timelineColor};
+  background-color: ${props => props.theme.timelineColor};
   align-self: center;
 `
 

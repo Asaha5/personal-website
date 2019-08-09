@@ -35,11 +35,11 @@ const IconContainer = styled.span`
   margin-right: 0.5rem;
   line-height: 2rem;
   vertical-align: middle;
-  color: var(--d-text-color, white);
+  color: ${props => props.theme.textColor};
 `;
 
 const IconLink = styled.a`
-  color: var(--d-text-color, white);
+  color: ${props => props.theme.textColor};
 `;
 
 export default () => {
@@ -52,7 +52,7 @@ export default () => {
             <IconContainer>
               <i class="fas fa-phone" />
             </IconContainer>
-            {contactDetails.email}
+            {contactDetails.phone}
           </ContactDetail>
         </ContactDetailContainer>
         <ContactDetailContainer>

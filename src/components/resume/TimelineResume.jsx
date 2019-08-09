@@ -1,9 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import SectionHeader from "../SectionHeader";
 import Timeline from "./Timeline";
 import TimelineCard from "./TimelineCard";
 import {resumeItems} from "../constants";
+import { fadeInUp } from 'react-animations';
+
+const fadeInUpAnimation = keyframes`${fadeInUp}`;
 
 const TimelineResumeContainer = styled.div`
   display: flex;
@@ -16,6 +19,7 @@ const TimelineResumeItem = styled.div`
   height: auto;
   width: 100%;
   justify-content: center;
+  animation: 1s ${fadeInUpAnimation};
   :not(:first-child) {
     margin-top: 2rem;
   }

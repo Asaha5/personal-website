@@ -16,7 +16,7 @@ const CardHeader = styled.h3`
   padding: 0.5rem 1rem;
   font-weight: 700;
   font-size: 1.8rem;
-  border-bottom: 2px solid #00e874;
+  border-bottom: 2px solid ${props => props.theme.timelineColor};
   margin: 0.2rem;
 `;
 
@@ -39,7 +39,7 @@ const CardContentSubHeader = styled.h3`
   font-weight: 600;
   font-size: 1.5rem;
   list-style-type: none;
-  color: #ff9d9d;
+  color: ${props => props.theme.cardSubHeader};
   margin: 0.5rem;
 `;
 

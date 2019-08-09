@@ -23,9 +23,12 @@ const SkillSubHeader = styled.h3`
   font-weight: 600;
   font-size: 1.5rem;
   list-style-type: none;
-  color: #ff9d9d;
+  color: ${props => props.theme.cardSubHeader};
   margin: 0.5rem;
   flex: 0 0 250px;
+  @media only screen and (max-width: 600px) {
+    flex: 0 0 180px;
+  }
 `;
 
 export default () => {
@@ -39,7 +42,6 @@ export default () => {
               <SkillSubHeader>{skill}</SkillSubHeader>
               <Stars
                 fontSize={"1.2rem"}
-                color={"hsla(0,0%,100%,0.88)"}
                 rating={rating}
                 keyIdx={idx}
               />

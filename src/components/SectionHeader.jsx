@@ -7,7 +7,7 @@ export default styled.h1`
   text-align: center;
   justify-self: center;
   align-self: center;
-  color: var(--d-yellow-color, yellow);
+  color: ${props => props.theme.headerTextColor};
   text-transform: capitalize;
   margin: .2rem;
   /* :before {

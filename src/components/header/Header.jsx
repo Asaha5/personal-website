@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import profileImage from "../../profile.jpg";
+import { headerMenus } from "../constants";
 
 const HeaderContainer = styled.nav`
   display: flex;
@@ -26,10 +27,11 @@ const HeaderItem = styled.a`
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
+  color: ${props => props.theme.textColor};
   transition: border-bottom 0.3s ease;
   :hover {
     padding-bottom: 2px;
-    border-bottom: 3px solid #FFAA55;
+    border-bottom: 3px solid ${props => props.theme.miscColor};
   }
 `;
 
@@ -43,15 +45,13 @@ const Image = styled.img`
   }
 `;
 
-const headerMenus = ["Who Am I?", "What do I do?", "May I help?"];
-
 export default () => {
   return (
     <HeaderContainer>
       <Image src={profileImage} alt="Arijit Saha" />
       <HeaderMenuContainer>
-        {headerMenus.map((menu, idx) => {
-          return <HeaderItem key={`header_menu_${idx}`}>{menu}</HeaderItem>;
+        {headerMenus.map(({value, link}, idx) => {
+          return <HeaderItem key={`header_menu_${idx}`} href={`#${link}`}>{value}</HeaderItem>;
         })}
       </HeaderMenuContainer>
     </HeaderContainer>

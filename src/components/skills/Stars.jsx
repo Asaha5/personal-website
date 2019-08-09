@@ -2,9 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const StarContainer = styled.span`
+
   font-size: ${props => props.fontSize};
-  color: ${props => props.color};
-  align-self:center;
+  color: ${props =>
+    props.filled ? props.theme.filledStarColor : props.theme.textColor};
+  align-self: center;
+
 `;
 
 export default ({ rating, fontSize, color, keyIdx }) => {
@@ -15,10 +18,10 @@ export default ({ rating, fontSize, color, keyIdx }) => {
         return (
           <StarContainer
             fontSize={fontSize}
-            color={'#7DBEFF'}
+            filled={true}
             key={`checked_star_${keyIdx}_${item}_${idx}`}
           >
-            <i class="fas fa-star" />
+            <i className="fas fa-star" />
           </StarContainer>
         );
       })}
@@ -26,10 +29,10 @@ export default ({ rating, fontSize, color, keyIdx }) => {
         return (
           <StarContainer
             fontSize={fontSize}
-            color={color}
+            filled={false}
             key={`uncheked_star_${keyIdx}_${item}_${idx}`}
           >
-            <i class="far fa-star"></i>
+            <i className="far fa-star" />
           </StarContainer>
         );
       })}

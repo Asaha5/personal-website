@@ -1,19 +1,35 @@
-export const aboutMe = `Hi I'm Arijit. Currently based out of Bangalore, India and working as Full Stack Developer in ANZ. Apart from coding
-I love cooking in my free time. Have a desire to travel the world with my wife.`;
+export const headerMenus = [
+  {
+    value: "Who Am I?",
+    link: "aboutme"
+  },
+  {
+    value: "What do I do?",
+    link: "skills"
+  },
+  {
+    value: "May I help?",
+    link: "footer"
+  }
+];
+
+export const aboutMe = `Hi I'm Arijit and currently live in Bangalore, India. I'm a Full Stack Developer working in ANZ. Apart from coding,
+I love cooking in my free time. I have a dream to travel the world with my wife. Long way to go...`;
 
 export const resumeItems = [
   {
     company: "ANZ",
     designation: "Engineer",
     role: "Working as Full Stack Web Developer(MERN Stack).",
-    skills: "HTML5, CSS, JavaScript, React, Node.js, Express, GraphQL, Ag-Grid",
+    skills: "HTML5, CSS, JavaScript, React, Node.js, Express, GraphQL, MongoDB, Ag-Grid",
     startYear: "Dec 2018",
     endYear: "Present"
   },
   {
     company: "PwC",
     designation: "Senior Consultant",
-    role: `Worked as a Technical Consultant and a Full Stack Developer(MERN Stack).Built a product known as Financial Management System for the client, which is now being used across the
+    role: `Worked as a Technical Consultant and a Full Stack Developer(MERN Stack).
+    Built a product known as Financial Management System for the client, which is now being used across the
     organisation.`,
     skills: "HTML5, CSS, JavaScript, React, Node.js, Express, HapiJS, Ag-Grid",
     startYear: "Apr 2018",
@@ -22,7 +38,8 @@ export const resumeItems = [
   {
     company: "PwC",
     designation: "Consultant",
-    role: `Worked as a Technical Consultant and a Full Stack Developer.Successfully built a product known a Stress Testing Tool, which was one of the regulatory requirements for
+    role: `Worked as a Technical Consultant and a Full Stack Developer.Successfully built a product known as Stress Testing Tool,
+    which was one of the regulatory requirements for
     the client.`,
     skills: "HTML5, CSS, JavaScript, React, Node.js, Express, C#, .NET, WPF",
     startYear: "Feb 2016",
@@ -31,17 +48,18 @@ export const resumeItems = [
   {
     company: "Mindtree",
     designation: "Senior Software Engineer",
-    role: `It was fairly short stint and during that time also I contributed in one of their engagements, where I built an
-    API using Node.Js.`,
-    skills: "Node.js, Express",
+    role: `Though it was a short stint, I managed to contribute in one of their engagements, where I built an
+    API using Node.Js and Express.`,
+    skills: "JavaScript, Node.js, Express",
     startYear: "Oct 2015",
     endYear: "Feb 2016"
   },
   {
     company: "Cognizant",
     designation: "Programmer Analyst",
-    role: `Being the first job, I was trained in .NET.Application development in .NET technologies and JavaScript.`,
-    skills: "C#, .NET, JavaScript, WCF, ASMX Web Service, MapQuest",
+    role: `Being the first job, I was trained in .NET and worked as a .NET developer. Developed location search
+    service using MapQuest mapping provider for one of the largest American restaurant chains.`,
+    skills: "C#, .NET, JavaScript, WCF, ASMX Web Service, MapQuest, MongoDB",
     startYear: "Feb 2013",
     endYear: "Oct 2015"
   }
