@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Layout from './components/Layout';
 import { DarkTheme, LightTheme } from "./common/ThemeContext";
+import {  IntersectionObserverDefault, IntersectionObserverContext } from "./common/IntersectionObserverContext";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -29,12 +30,14 @@ function App() {
   const [currentTheme, setTheme] = useState("light");
   return (
     <ThemeProvider theme={currentTheme === "dark" ? DarkTheme : LightTheme}>
-      <>
-        <GlobalStyle theme={currentTheme === "dark" ? DarkTheme : LightTheme} />
-        <Layout toggleTheme={(e) => {
-          setTheme(currentTheme === "dark" ? "light" : "dark")
-        }} />
-      </>
+      <IntersectionObserverContext.Provider value={IntersectionObserverDefault}>
+        <>
+          <GlobalStyle theme={currentTheme === "dark" ? DarkTheme : LightTheme} />
+          <Layout toggleTheme={(e) => {
+            setTheme(currentTheme === "dark" ? "light" : "dark")
+          }} />
+        </>
+      </IntersectionObserverContext.Provider>
     </ThemeProvider>
   );
 }

@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import {ratingToLevelMap} from "../constants";
+import withAnimate from "../../common/Animate";
 
 const Bar = styled.div`
   position: relative;
   height: 1.2rem;
+  opacity: ${props => props.scrolledIntoView ? 1 : 0};
   width: ${props => `${props.rating * 15}%`};
   background-color: ${props => props.theme.barColors[props.rating]};
   align-self: center;
   cursor: pointer;
+  transition: opacity 0.8s ease;
   :after {
       content: '${props => `${ratingToLevelMap[props.rating]}`}';
       visibility: hidden;
@@ -31,12 +34,17 @@ const Bar = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
+    width: ${props => `${props.rating * 2.5}rem`};
     :after {
       display: none;
     }
   }
 `;
 
+const AnimatedBar = withAnimate(Bar);
+
 export default ({ rating }) => {
-  return <Bar rating={rating} />;
+  return (
+    <AnimatedBar rating={rating}/>
+  )
 };

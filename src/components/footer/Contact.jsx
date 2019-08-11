@@ -56,7 +56,7 @@ export default () => {
         <ContactDetailContainer>
           <ContactDetail>
             <IconContainer>
-              <i class="fas fa-phone" />
+              <i className="fas fa-phone" />
             </IconContainer>
             {contactDetails.phone}
           </ContactDetail>
@@ -64,7 +64,7 @@ export default () => {
         <ContactDetailContainer>
           <ContactDetail>
             <IconContainer>
-              <i class="fas fa-envelope" />
+              <i className="fas fa-envelope" />
             </IconContainer>
             {contactDetails.email}
           </ContactDetail>
@@ -73,7 +73,7 @@ export default () => {
           <ContactDetail>
             <IconContainer>
               <IconLink href={contactDetails.linkedIn}>
-                <i class="fab fa-linkedin" />
+                <i className="fab fa-linkedin" />
               </IconLink>
             </IconContainer>
           </ContactDetail>

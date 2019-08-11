@@ -99,7 +99,7 @@ export default ({toggleTheme}) => {
         <Contact />
       </Footer>
       <TopButton href="#top" id="top-anchor">
-        <i class="fas fa-arrow-circle-up" />
+        <i className="fas fa-arrow-circle-up" />
       </TopButton>
     </Layout>
   );

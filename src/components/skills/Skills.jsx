@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SectionHeader from "../SectionHeader";
 import { skills } from "../constants";
-import Stars from "./Stars";
+// import Stars from "./Stars";
 import Bar from "./Bar";
 
 const SkillsContainer = styled.div`
@@ -21,6 +21,7 @@ const SkillItemsContainer = styled.div`
 const SkillItem = styled.div`
   display: flex;
   justify-content: flex-start;
+  width: 100%;
 `;
 
 const SkillSubHeader = styled.h3`
